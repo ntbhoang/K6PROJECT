@@ -1,0 +1,9 @@
+1- VUs: virtual users
+2- Latency: a delay time between a request and a response 
+    - Low latency: indicates that the service is performing well.
+    - High latency: indicates that the service is not performing well.
+    - Ex: If you ask a restaurant for your dish, and they need 15m to prepare for your dish. High latency.
+3- Throughput: shows the number of requests handled over a period of time. 
+    - Ex: your store can only serves 100 customers per hour.
+    - In performance testing we look at the throughput number to understand the app's capacity. 
+4- Iterations: in K6 doing things over and over to test how system handle the repeated actions.

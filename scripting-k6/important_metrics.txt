@@ -1,0 +1,26 @@
+- http_req_duration: how long it took from sending the request until we have received the response.
+    - p(90): 90% of the requests were === or > than the given latency.
+    - But why? Why we don't look at the avg metric? And what is the good latency in any case? 
+        + Sometimes, avg metric does not tell the whole story. 
+        + Imagine that you we run a survey on how long does it take to publish a listing via bds platform.
+        -> then the survey tell us that avg number is 4 hours. But we got quite a lot of complaints from
+        users that there were a lot of clinents waited for 8 to 12 hours. So, there was something not true
+        with avg metric, we'll need a deeper insight? Then we dig deeper, we figured it out that:
+        80% of ppl were able to list their ad on 30 minutes. 20% waited for a day to be listed. 
+        So, none of them get listed in 4 hours which is our average time.
+        Now, you knew that avg metric is such a misleading number. 
+
+
+- So, what is a good latency? Well, the anwser is not that quite easy. We cannot simply set our expectation such as 
+"We need 1 mil requests are all below 700ms" - That is impossible in real life. 
+- Instead, we should use SLO (Service-Level Objective)
+- Let's say: 
+    + Availability: The app will be available 99.7% of the time. For that, we define the response time.
+    + Response time: 
+        - 90% of response are within 0.5s of receiving a request.
+        - 95% of response are within 0.9s of receiving a request.
+        - 99% of response are within 2.0s of receiving a request.
+
+https://www.atlassian.com/incident-management/kpis/sla-vs-slo-vs-sli
+
+    
